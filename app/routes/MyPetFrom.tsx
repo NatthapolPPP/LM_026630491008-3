@@ -47,6 +47,7 @@ export default function pet (){
 
     return(
         <div>
+            <h1 className="font-bold text-xl mb-2">แบบฟอร์มสัตว์เลี้ยง</h1>
             <label>ชื่อ:</label>
             <input 
                 name="cName"
