@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function pet (){
+export default function Frompet() {
     const [name, setName] = useState('');
     const [Photo, setPhoto] = useState('');
     const [birthday, setBd] = useState('');
@@ -53,7 +53,8 @@ export default function pet (){
                 name="cName"
                 className="border-1"
                 onChange={(e) => setName(e.target.value)}
-            /><hr />
+            />
+            <hr />
             <label>รูปภาพ:</label>
             <input 
                 name="cName"
@@ -61,36 +62,42 @@ export default function pet (){
                 onChange={(e) => setPhoto(e.target.value)}
             /><hr />
             <label>วันเกิด: </label>
-            <input type="date"
+            <input 
+                type="date"
                 name="cPos"
                 className="border-1"
                 onChange={(e) => setBd(e.target.value)}
             /><hr />
             <label>ประเถท: </label>
             <select onChange={(e) => setCategory(e.target.value)}>
-            <option value="cat">แมว</option>
-            <option value="dog">หมา</option>
-            <option value="fish">ปลา</option>
+            <option value="ไม่ระบุ">ไม่ระบุ</option>
+            <option value="แมว">แมว</option>
+            <option value="หมา">หมา</option>
+            <option value="หนู">หนู</option>
             </select><hr />
             <label>เพศ: </label>
-            <input type="radio"
+            <input 
+                type="radio"
                 name="cWorkplace"
-                value={"Male"}
+                value={"ชาย"}
                 className="border-1"
                 onChange={(e) => setSex(e.target.value)}
             /> ชาย 
-            <input type="radio"
+            <input 
+                type="radio"
                 name="cWorkplace"
-                value={"Female"}
+                value={"หญิง"}
                 className="border-1"
                 onChange={(e) => setSex(e.target.value)}
             /> หญิง
-            <input type="radio"
+            <input 
+                type="radio"
                 name="cWorkplace"
-                value={"other"}
+                value={"อื่นๆ"}
                 className="border-1"
                 onChange={(e) => setSex(e.target.value)}
-            /> อื่นๆ <hr />
+            /> อื่นๆ 
+            <hr />
             <label>ข้อมูลเพิ่มเติม:</label>
             <textarea 
                 name="cDesc"
@@ -101,14 +108,15 @@ export default function pet (){
             />
             <hr /><hr /><hr />
             <div style={div_maring}>
-            <label>ชื่่อ:</label>
+            <label>ชื่่อเจ้าของ:</label>
             <input 
                 name="cName"
                 className="border-1"
                 onChange={(e) => setHumen(e.target.value)}
             /><hr />
             <label>Email:</label>
-            <input type="email"
+            <input 
+                type="email"
                 name="cName"
                 className="border-1"
                 onChange={(e) => setEmail(e.target.value)}
@@ -116,28 +124,27 @@ export default function pet (){
             <hr />
             <button 
             onClick={() => handleClickAdd(name,Photo,birthday,Category,sex,desc,Humen,Email)}
-            className = "border bg-green-300 h-18 w-20"
-            >
+            className = "border bg-green-300 h-18 w-20">
                 Summit
             </button>
             <button 
             onClick={() => handleClickReset()}
-            className = "border h-18 w-20"
-            >
+            className = "border bg-white h-18 w-20">
                 reset
             </button>
             </div>
             <hr />
             <div style={div_maring}>
-            <h1 className="font-bold text-xl mb-2"> {name} </h1>
+            <h1 className="font-bold text-xl mb-2"> ชื่อ:{name} </h1>
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                <img className="w-100 h-300" src={Photo} />
-            <p className="font-bold text-xl mb-2"> {birthday} </p>
-            <p className="font-bold text-xl mb-2"> {Category} </p>
-            <p className="font-bold text-xl mb-2"> {sex} </p>
-            <p className="font-bold text-xl mb-2"> {desc} </p>
-            <p className="font-bold text-xl mb-2"> {Humen} </p>
-            <p className="font-bold text-xl mb-2"> {Email} </p>
+             <p className="font-bold text-xl mb-2">รูปภาพ</p>   <img className="w-100 h-300" src={Photo} />
+            <p className="font-bold text-xl mb-2"> วันเกิด:{birthday} </p>
+            <p className="font-bold text-xl mb-2"> ประเถท:{Category} </p>
+            <p className="font-bold text-xl mb-2"> เพศ:{sex} </p>
+            <p className="font-bold text-xl mb-2"> ข้อมูลเพิ่มเติม:{desc} </p>
+            <hr />
+            <p className="font-bold text-xl mb-2"> ชื่อเจ้าของ:{Humen} </p>
+            <p className="font-bold text-xl mb-2"> อีเมล:{Email} </p>
             </div>
         </div>
         </div>

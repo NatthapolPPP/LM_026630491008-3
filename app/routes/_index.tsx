@@ -1,7 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import Pet from "./template";
 
-
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
